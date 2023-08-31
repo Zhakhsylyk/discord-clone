@@ -16,6 +16,7 @@
   }
 }
 
+
 body {
   background-color: #313338;
 }
@@ -29,4 +30,15 @@ body {
   /* Height of the line */
   background-color: #35363C;
   left: 1;
+}
+
+.avatar::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 35px;
+  background-color: rgb(95, 187, 95);
+  left: 33px;
 }

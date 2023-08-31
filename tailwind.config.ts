@@ -7,14 +7,16 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    colors: {
-      'eerie-black': '#1E1F22',
-      'dark-charcoal': '#2B2D31',
-      'cadet-gray': '#949BA4',
-      'nebula-blue': '#5865F2',
-      'pigment-green': '#23A559'
-    },
     extend: {
+      colors: {
+        'eerie-black': '#1E1F22',
+        'dark-charcoal': '#2B2D31',
+        'cadet-gray': '#949BA4',
+        'nebula-blue': '#5865F2',
+        'pigment-green': '#23A559',
+        'raisin-black': '#232428',
+        'zinc':'#B5BAC1'
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':

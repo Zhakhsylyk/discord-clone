@@ -1,6 +1,9 @@
 import Image from 'next/image'
-import { BsDiscord, BsDownload } from 'react-icons/bs';
+import { BsDiscord, BsDownload, BsHeadphones } from 'react-icons/bs';
 import { IoAddSharp, IoCompass } from 'react-icons/io5';
+import { IoMdAdd } from 'react-icons/io'
+import { BiSolidMicrophone, BiRadioCircleMarked } from 'react-icons/bi';
+import { RiSettings5Fill } from 'react-icons/ri';
 
 
 export default function Home() {
@@ -23,13 +26,13 @@ export default function Home() {
 
         </div>
       </aside>
-      <aside className='bg-dark-charcoal h-screen w-[16.7rem] text-cadet-gray font-medium pt-3'>
+      <aside className='bg-dark-charcoal h-screen w-[16.7rem] text-cadet-gray font-medium pt-3 relative'>
         <div className='border-b-2 border-eerie-black h-11'>
           <input placeholder='Найти или начать беседу' className='bg-eerie-black p-2 rounded-md ml-3 h-8 w-60 text-sm' />
         </div>
         <div className='mt-2 gap-1 flex flex-col'>
           <div className='flex gap-5 w-60 ml-3 justify-start items-center  p-2'>
-            <svg aria-hidden="true" role="img" width="28" height="28" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path fill="currentColor" fill-rule="nonzero" d="M0.5,0 L0.5,1.5 C0.5,5.65 2.71,9.28 6,11.3 L6,16 L21,16 L21,14 C21,11.34 15.67,10 13,10 C13,10 12.83,10 12.75,10 C8,10 4,6 4,1.5 L4,0 L0.5,0 Z M13,0 C10.790861,0 9,1.790861 9,4 C9,6.209139 10.790861,8 13,8 C15.209139,8 17,6.209139 17,4 C17,1.790861 15.209139,0 13,0 Z" transform="translate(2 4)"></path><path d="M0,0 L24,0 L24,24 L0,24 L0,0 Z M0,0 L24,0 L24,24 L0,24 L0,0 Z M0,0 L24,0 L24,24 L0,24 L0,0 Z"></path></g></svg>
+            <svg aria-hidden="true" role="img" width="28" height="28" viewBox="0 0 24 24"><g fill="none" fillRule="evenodd"><path fill="currentColor" fillRule="nonzero" d="M0.5,0 L0.5,1.5 C0.5,5.65 2.71,9.28 6,11.3 L6,16 L21,16 L21,14 C21,11.34 15.67,10 13,10 C13,10 12.83,10 12.75,10 C8,10 4,6 4,1.5 L4,0 L0.5,0 Z M13,0 C10.790861,0 9,1.790861 9,4 C9,6.209139 10.790861,8 13,8 C15.209139,8 17,6.209139 17,4 C17,1.790861 15.209139,0 13,0 Z" transform="translate(2 4)"></path><path d="M0,0 L24,0 L24,24 L0,24 L0,0 Z M0,0 L24,0 L24,24 L0,24 L0,0 Z M0,0 L24,0 L24,24 L0,24 L0,0 Z"></path></g></svg>
             <p>Друзья</p>
           </div>
           <div className='flex gap-5 w-60 ml-3 justify-start items-center  p-2'>
@@ -41,13 +44,78 @@ export default function Home() {
             <p>Запросы общения</p>
           </div>
         </div>
-        <div className='messages mt-5 uppercase text-xs'>
-          Личные сообщения
+        <div className='flex flex-col'>
+          <div className='flex justify-between mt-5 uppercase text-xs w-60 ml-3'>
+            <p>
+              Личные сообщения
+            </p>
+            <IoMdAdd color='#fff' size='1rem' />
+          </div>
+          <div className='mt-2'>
+            <div className='flex gap-2 w-60 ml-3 justify-start items-center  p-2'>
+              <div className='bg-nebula-blue rounded-full p-2'>
+                <BsDiscord color='#fff' size='1.25rem' />
+              </div>
+              <p>Username</p>
+            </div>
+            <div className='flex gap-2 w-60 ml-3 justify-start items-center  p-2'>
+              <div className='rounded-full p-2 bg-orange-500'>
+                <BsDiscord color='#fff' size='1.25rem' />
+              </div>
+              <p>Username</p>
+            </div>
+            <div className='flex gap-2 w-60 ml-3 justify-start items-center  p-2'>
+              <div className='rounded-full p-2 bg-gray-500'>
+                <BsDiscord color='#fff' size='1.25rem' />
+              </div>
+              <p>Username</p>
+            </div>
+            <div className='flex gap-2 w-60 ml-3 justify-start items-center  p-2'>
+              <div className='rounded-full p-2 bg-green-600'>
+                <BsDiscord color='#fff' size='1.25rem' />
+              </div>
+              <p>Username</p>
+            </div>
+          </div>
         </div>
+        <footer className='absolute bottom-0 h-14 bg-raisin-black w-full flex items-center px-2 gap-5'>
+          <div className='flex items-center gap-2'>
+            <div className='avatar rounded-full p-2 bg-gray-500'>
+              <BsDiscord color='#fff' size='1.25rem' />
+            </div>
+            <div className='flex flex-col text-xs'>
+              <p className=' text-white text-sm'>my_username</p>
+              <p>my_status</p>
+            </div>
+          </div>
+          <div className='flex gap-3'>
+            <BiSolidMicrophone color='#B5BAC1' size='1.35rem' />
+            <BsHeadphones color='#B5BAC1' size='1.35rem' />
+            <RiSettings5Fill color='#B5BAC1' size='1.35rem' />
+          </div>
+        </footer>
       </aside>
       <section>
-        <nav>
-
+        <nav className='flex border-b-2 border-eerie-black h-14 text-cadet-gray'>
+          <div className='flex gap-5 w-60 ml-3 justify-start items-center  p-2'>
+            <svg aria-hidden="true" role="img" width="28" height="28" viewBox="0 0 24 24"><g fill="none" fillRule="evenodd"><path fill="currentColor" fillRule="nonzero" d="M0.5,0 L0.5,1.5 C0.5,5.65 2.71,9.28 6,11.3 L6,16 L21,16 L21,14 C21,11.34 15.67,10 13,10 C13,10 12.83,10 12.75,10 C8,10 4,6 4,1.5 L4,0 L0.5,0 Z M13,0 C10.790861,0 9,1.790861 9,4 C9,6.209139 10.790861,8 13,8 C15.209139,8 17,6.209139 17,4 C17,1.790861 15.209139,0 13,0 Z" transform="translate(2 4)"></path><path d="M0,0 L24,0 L24,24 L0,24 L0,0 Z M0,0 L24,0 L24,24 L0,24 L0,0 Z M0,0 L24,0 L24,24 L0,24 L0,0 Z"></path></g></svg>
+            <p>Друзья</p>
+          </div>
+          <div className='flex  ml-3 justify-start items-center  p-2'>
+            <p>В сети</p>
+          </div>
+          <div className='flex  ml-3 justify-start items-center  p-2'>
+            <p>Все</p>
+          </div>
+          <div className='flex  ml-3 justify-start items-center  p-2'>
+            <p>Ожидание</p>
+          </div>
+          <div className='flex   ml-3 justify-start items-center  p-2'>
+            <p>Заблокированные</p>
+          </div>
+          <div className='flex   ml-3 justify-start items-center  p-2'>
+            <p>Добавить в друзья</p>
+          </div>
         </nav>
         <main>
           <section>
