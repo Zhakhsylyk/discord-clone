@@ -17,11 +17,16 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #313338;
+}
+
+.discord-icon::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  top: 75px;
+  /* Height of the line */
+  background-color: #35363C;
+  left: 1;
 }
